@@ -40,10 +40,10 @@ tekon92:
 every new blog post created, it requires header that contain like example below
 
 ```
-layout: \\ what layout you want to use. ex: blog-post
-title: \\ title of the blog post. ex: Technischer Bericht veröffentlicht
-language: \\ language of the blog post. ex: en (for english)
-author: \\ the creator of the blogpost. ex: bachelorproject (please check above step to add new username)
+layout: # what layout you want to use. ex: blog-post
+title: # title of the blog post. ex: Technischer Bericht veröffentlicht
+language: # language of the blog post. ex: en (for english)
+author: # the creator of the blogpost. ex: bachelorproject (please check above step to add new username)
 ```
 
 
