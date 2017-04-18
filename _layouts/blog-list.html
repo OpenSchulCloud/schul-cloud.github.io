@@ -33,8 +33,22 @@
       <a class="read-more" href="{{ post.url | escape }}">»</a>
     </section>
     <footer class="post-meta">
-      {% assign author = site.data.people[post.author] %}
-      <a href="{{ author.url }}">{{ author.name | escape}}</a>
+      {% assign authorCnt = post.author | size %}
+      {% if authorCnt == 0 %}
+        No Author
+      {% elsif authorCnt == 1 %}
+        {{ post.author | first }}
+      {% else %}
+        {% for author in post.author %}
+          {% if forloop.first %}
+            <a href="{{ site.data.people[author].url }}">{{ author | escape}}</a>
+          {% elsif forloop.last %}
+            and <a href="{{ site.data.people[author].url }}">{{ author | escape}}</a>
+          {% else %}
+            , <a href="{{ site.data.people[author].url }}">{{ author | escape}}</a>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
       <time class="post-date" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d.%m.%Y" }}</time>
     </footer>
   </article>
