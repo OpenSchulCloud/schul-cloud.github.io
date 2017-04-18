@@ -2,7 +2,9 @@
 layout: blog-post
 title: How To Add Blog Post
 language: en
-author: tekon92
+author:
+- tekon92
+- niccokunzmann
 ---
 
 on this post i will explain some things, such as :
