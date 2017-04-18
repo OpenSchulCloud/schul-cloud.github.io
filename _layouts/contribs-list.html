@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html {% if page.language %}lang="{{ page.language | escape }}"{% endif %}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title | escape }}</title>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <!-- author[1].name | escape -->
+    <!-- {{ site.data.people || jsonify }} -->
+    <main id="content" class="content" role="main">
+      <div id="grid" class="row flex-grid">
+        {% for author in site.data.people %}
+          <article class="box-item post-misc shown">
+            <div class="box-body">
+                <h4>
+                  <a href="{{ author[1].url | escape }}">{{ author[1].name | escape }}</a>
+                </h4>
+                <p>Read <a href="{{ author[1].url | escape }}">more posts</a> by this author.</p>
+                <div class="author-meta">
+                  <span class="author-link icon-link"><a href="{{ author[1].url | escape }}">{{ author[1].url | escape }}</a></span>
+                </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

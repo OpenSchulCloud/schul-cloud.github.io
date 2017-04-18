@@ -2,7 +2,6 @@
 layout: page
 title: schul-cloud
 language: en
-author: tekon92
 ---
 
 
