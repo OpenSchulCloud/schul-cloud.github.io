@@ -42,7 +42,7 @@ Wo kann ich meine Ergebnisse zeigen?
 
 Du kannst am Entwicklerblog teilnehmen, indem du eine Datei in dem
 [Blogposts-Ordner][blog-posts] einfügst.
-DU kannst den [Blog auch einsehen][blog]
+Du kannst den [Blog auch einsehen][blog]
 
 Wie kann ich Einsteigern helfen?
 --------------------------------
