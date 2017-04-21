@@ -109,8 +109,6 @@ export DB_PASSWORD=abc123
 export DB_URL=mongodb://127.0.0.1/admin
 ```
 
-*NOTE: DB_URL was introduced in [PR 134](https://github.com/schul-cloud/schulcloud-server/pull/134). If it is merged, you can remove this notice.*
-
 ## Start the Server
 
 You can start the Schul-Cloud server by running this command:
