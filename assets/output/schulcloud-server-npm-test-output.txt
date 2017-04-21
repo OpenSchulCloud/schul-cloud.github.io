@@ -1,0 +1,364 @@
+2017-04-21T10:51:20.168-0700	connected to: localhost:27017
+2017-04-21T10:51:20.168-0700	dropping: schulcloud-test.accounts
+2017-04-21T10:51:20.177-0700	imported 5 documents
+2017-04-21T10:51:20.195-0700	connected to: localhost:27017
+2017-04-21T10:51:20.196Importing schulcloud-test/federalstates from federalstates.json
+Importing schulcloud-test/ltitools from ltitools.secrets.json
+Importing schulcloud-test/roles from roles.json
+Importing schulcloud-test/schools from schools.json
+Importing schulcloud-test/systems from systems.json
+Importing schulcloud-test/users from users.json
+
+> schulcloud@0.0.0 lint /home/coderdojo/schulcloud-server
+> eslint ./src ./test --ext .js --fix
+
+
+> schulcloud@0.0.0 coverage /home/coderdojo/schulcloud-server
+> NODE_ENV=test istanbul cover node_modules/.bin/_mocha -- -- test/**/*.test.js
+
+warn: The AWS config couldn't be read
+Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
+Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
+Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
+
+
+  Feathers application tests
+    ✓ starts and shows the index page (144ms)
+    404
+      ✓ shows a 404 page
+      ✓ shows a 404 JSON error without stack trace
+      ✓ serves swagger api docs
+
+  account service
+    ✓ registered the accounts service
+
+  ITSLearning System
+    1) should be able to retrieve username/hash/etc.
+    ✓ should not be able to retrieve anythi[31merror[39m:      [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mTypeError[0m[90m:[0m[37m [0m[97mCannot read propert[0m  [0m[97my 'getPermissions' of null[0m[0m
+[0m  [0m[97m[0m  [0m[0m
+[0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m9[0m[37m [0m[37mM[0m  [0m[97model.findById.then.modelInstance[0m[0m
+[0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/hooks/index.js:9:49[0m  [0m[97m21[0m[0m
+[0m  [0m[97m[0m  [0m[0m
+[0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+[0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+[0m  [0m[97m[0m  [0m[0m
+[0m  [0m[97m[0m[0m
+[0m
+(node:16214) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 25): TypeError: Cannot read property '_id' of undefined
+=============================================================================
+Writing coverage object [/home/coderdojo/schulcloud-server/coverage/coverage.json]
+Writing coverage reports at [/home/coderdojo/schulcloud-server/coverage]
+=============================================================================
+
+npm ERR! Linux 4.4.0-31-generic
+npm ERR! argv "/home/coderdojo/node-v6.10.2-linux-x64/bin/node" "/home/coderdojo/node-v6.10.2-linux-x64/bin/npm" "run" "coverage"
+npm ERR! node v6.10.2
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! schulcloud@0.0.0 coverage: `NODE_ENV=test istanbul cover node_modules/.bin/_mocha -- -- test/**/*.test.js`
+npm ERR! Exit status 12
+npm ERR! 
+npm ERR! Failed at the schulcloud@0.0.0 coverage script 'NODE_ENV=test istanbul cover node_modules/.bin/_mocha -- -- test/**/*.test.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the schulcloud package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     NODE_ENV=test istanbul cover node_modules/.bin/_mocha -- -- test/**/*.test.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs schulcloud
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls schulcloud
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/coderdojo/schulcloud-server/npm-debug.log
+npm ERR! Test failed.  See above for more details.
+d the resolve/scopes service
+    ✓ get error if id is no object id
+    ✓ get 404 if no user is found
+    11) return scopes if user is found
+
+  resolve/users service
+    ✓ registered the resolve/users service
+    ✓ get error if no scope is found
+    12) return users if scope is found
+
+  school service
+    ✓ registered the schools service
+
+  systemId service
+    ✓ registered the systems service
+
+  user service
+    ✓ registered the users service
+    ✓ resolves permissions correctly
+
+
+  43 passing (39s)
+  12 failing
+
+  1) ITSLearning System should be able to retrieve username/hash/etc.:
+     Timeout of 20000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97mTimeout of 20000ms exceeded. For async tests and hooks, ensure "done()"[0m  [0m[97m is called; if returning a Promise, ensure it resolves.[0m
+  [0m  [0m
+  [0m  [0m[90m-[0m [0m[93mrunnable.js[0m[90m:[0m[93m232[0m[37m [0m[37mTimeout.<anonymous>[0m
+  [0m  [0m  [0m[90m[schulcloud-server]/[mocha]/lib/runnable.js:232:19[0m
+  [0m  [0m
+  [0m  [0m[90m-[0m [0m[93mtimers.js[0m[90m:[0m[93m380[0m[37m [0m[37montimeout[0m
+  [0m  [0m  [0m[90mtimers.js:380:14[0m
+  [0m  [0m
+  [0m  [0m[90m-[0m [0m[93mtimers.js[0m[90m:[0m[93m244[0m[37m [0m[37mtryOnTimeout[0m
+  [0m  [0m  [0m[90mtimers.js:244:5[0m
+  [0m  [0m
+  [0m  [0m[90m-[0m [0m[93mtimers.js[0m[90m:[0m[93m214[0m[37m [0m[37mTimer.listOnTimeout[0m
+  [0m  [0m  [0m[90mtimers.js:214:5[0m
+  [0m  [0m
+  [0m
+
+  2) AWS file storage strategy POST /fileStorage creates a bucket for the given school:
+       [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mNotFound[0m[90m:[0m[37m [0m[97mschool not found
+  [0m[0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mNotFound.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mNotFound.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m185[0m[37m [0m[37[0m  [0m[97mmnew NotFound[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:185:10[0m  [0m[97m1[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mawsS3.js[0m[90m:[0m[93m9[0m[37m [0m[37mS[0m  [0m[97mchoolModel.findById.exec.then.result[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/services/fileStorag[0m  [0m[97me/strategies/awsS3.[0m  [0m  [0m[90mjs:9:8560[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  3) AWS file storage strategy GET /fileStorage gets all stored files for one user:
+     You don't have permissions!
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mForbidden[0m[90m:[0m[37m [0m[97mYou don't have perm[0m  [0m[97missions![0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mForbidden.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mForbidden.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m173[0m[37m [0m[37[0m  [0m[97mmnew Forbidden[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:173:10[0m  [0m[97m3[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mawsS3.js[0m[90m:[0m[93m9[0m[37m [0m[37mU[0m  [0m[97mserModel.findById.exec.then.res[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/services/fileStorag[0m  [0m[97me/strategies/awsS3.[0m  [0m  [0m[90mjs:9:2195[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  4) AWS file storage strategy GET /fileStorage gets all stored files for one course:
+     You don't have permissions!
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mForbidden[0m[90m:[0m[37m [0m[97mYou don't have perm[0m  [0m[97missions![0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mForbidden.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mForbidden.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m173[0m[37m [0m[37[0m  [0m[97mmnew Forbidden[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:173:10[0m  [0m[97m3[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mawsS3.js[0m[90m:[0m[93m9[0m[37m [0m[37mC[0m  [0m[97mourseModel.find.exec.then.res[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/services/fileStorag[0m  [0m[97me/strategies/awsS3.[0m  [0m  [0m[90mjs:9:2825[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  5) AWS file storage strategy GET /fileStorage gets all stored files for the teacher of a course:
+     You don't have permissions!
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mForbidden[0m[90m:[0m[37m [0m[97mYou don't have perm[0m  [0m[97missions![0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mForbidden.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mForbidden.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m173[0m[37m [0m[37[0m  [0m[97mmnew Forbidden[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:173:10[0m  [0m[97m3[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mawsS3.js[0m[90m:[0m[93m9[0m[37m [0m[37mC[0m  [0m[97mourseModel.find.exec.then.res[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/services/fileStorag[0m  [0m[97me/strategies/awsS3.[0m  [0m  [0m[90mjs:9:2825[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  6) AWS file storage strategy DELETE /fileStorage/ deletes a file correctly:
+     You don't have permissions!
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mForbidden[0m[90m:[0m[37m [0m[97mYou don't have perm[0m  [0m[97missions![0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mForbidden.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mForbidden.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m173[0m[37m [0m[37[0m  [0m[97mmnew Forbidden[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:173:10[0m  [0m[97m3[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mawsS3.js[0m[90m:[0m[93m9[0m[37m [0m[37mU[0m  [0m[97mserModel.findById.exec.then.res[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/services/fileStorag[0m  [0m[97me/strategies/awsS3.[0m  [0m  [0m[90mjs:9:2195[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  7) AWS file storage strategy DELETE /fileStorage/ deletes a folder correctly:
+     You don't have permissions!
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mForbidden[0m[90m:[0m[37m [0m[97mYou don't have perm[0m  [0m[97missions![0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mForbidden.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mForbidden.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m173[0m[37m [0m[37[0m  [0m[97mmnew Forbidden[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:173:10[0m  [0m[97m3[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mawsS3.js[0m[90m:[0m[93m9[0m[37m [0m[37mU[0m  [0m[97mserModel.findById.exec.then.res[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/services/fileStorag[0m  [0m[97me/strategies/awsS3.[0m  [0m  [0m[90mjs:9:2195[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  8) AWS file storage strategy POST /fileStorage/signedUrl creates valid signed url:
+     You don't have permissions!
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mForbidden[0m[90m:[0m[37m [0m[97mYou don't have perm[0m  [0m[97missions![0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mForbidden.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mForbidden.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m173[0m[37m [0m[37[0m  [0m[97mmnew Forbidden[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:173:10[0m  [0m[97m3[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mawsS3.js[0m[90m:[0m[93m9[0m[37m [0m[37mU[0m  [0m[97mserModel.findById.exec.then.res[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/services/fileStorag[0m  [0m[97me/strategies/awsS3.[0m  [0m  [0m[90mjs:9:2195[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  9) AWS file storage strategy POST /fileStorage/directories creates a new directory:
+     You don't have permissions!
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mForbidden[0m[90m:[0m[37m [0m[97mYou don't have perm[0m  [0m[97missions![0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mForbidden.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mForbidden.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m173[0m[37m [0m[37[0m  [0m[97mmnew Forbidden[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:173:10[0m  [0m[97m3[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mawsS3.js[0m[90m:[0m[93m9[0m[37m [0m[37mU[0m  [0m[97mserModel.findById.exec.then.res[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/services/fileStorag[0m  [0m[97me/strategies/awsS3.[0m  [0m  [0m[90mjs:9:2195[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  10) passwordRecovery service "before all" hook:
+     Timeout of 10000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mError[0m[90m:[0m[37m [0m[97mTimeout of 10000ms exce[0m  [0m[97meded. For async tests and hooks, ensure "done()"[0m  [0m[97m is called; if [0m  [0m[97mreturning a Promise, ensure it resolves.[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mrunnable.js[0m[90m:[0m[93m232[0m[37m [0m[0m  [0m[97m[37mTimeout.<anonymous>[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[mocha]/lib/runnable.js:232:19[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mtimers.js[0m[90m:[0m[93m380[0m[37m [0m[3[0m  [0m[97m7montimeout[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90mtimers.js:380:14[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mtimers.js[0m[90m:[0m[93m244[0m[37m [0m[3[0m  [0m[97m7mtryOnTimeout[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90mtimers.js:244:5[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mtimers.js[0m[90m:[0m[93m214[0m[37m [0m[3[0m  [0m[97m7mTimer.listOnTimeout[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90mtimers.js:214:5[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  11) resolve/scopes service return scopes if user is found:
+     No record found for id '0000d213816abba584714c0a'
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mNotFound[0m[90m:[0m[37m [0m[97mNo record found for [0m  [0m[97mid '0000d213816abba584714c0a'[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mNotFound.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mNotFound.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m185[0m[37m [0m[37[0m  [0m[97mmnew NotFound[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:185:10[0m  [0m[97m1[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mservice.js[0m[90m:[0m[93m230[0m[37m [0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-mongoose]/lib/service.js:23[0m  [0m[97m0:17[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+  12) resolve/users service return users if scope is found:
+     No scope found for given id.
+    [0m[97m[41mError[0m[90m:[0m[37m [0m[97m[0m[97m[41mNotFound[0m[90m:[0m[37m [0m[97mNo scope found for g[0m  [0m[97miven id.[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m21[0m[37m [0m[37m[0m  [0m[97mNotFound.ExtendableBuiltin[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:21:28[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m96[0m[37m [0m[37m[0m  [0m[97mNotFound.FeathersError[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:96:116[0m  [0m[97m[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m185[0m[37m [0m[37[0m  [0m[97mmnew NotFound[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m[schulcloud-server]/[feathers-errors]/lib/index.js:185:10[0m  [0m[97m1[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mindex.js[0m[90m:[0m[93m9[0m[37m [0m[37mg[0m  [0m[97metScope.then.scope[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90m/home/coderdojo/schulcloud-server/src/services/resolve/in[0m  [0m[97mdex.js:9:4135[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m  [0m[90m-[0m [0m[93mnext_tick.js[0m[90m:[0m[93m135[0m[37m [0m[0m  [0m[97m[37mprocess._tickDomainCallback[0m[0m
+  [0m  [0m[97m[0m  [0m  [0m[90minternal/process/next_tick.js:135:7[0m[0m
+  [0m  [0m[97m[0m  [0m[0m
+  [0m  [0m[97m[0m[0m
+  [0m
+
+
+
+
+=============================== Coverage summary ===============================
+Statements   : 74.49% ( 832/1117 )
+Branches     : 42.76% ( 121/283 )
+Functions    : 69.79% ( 67/96 )
+Lines        : 76.89% ( 815/1060 )
+================================================================================
