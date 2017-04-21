@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: Setup Schulcloud for Development under Ubuntu
+title: Setup Schul-Cloud for Development under Ubuntu
 language: en
 author:
 - niccokunzmann
@@ -126,7 +126,7 @@ warn: The AWS config couldn't be read
 Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
 Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
 Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
-info:    SchulCloud application started on http://localhost:3030
+info:    Schul-Cloud application started on http://localhost:3030
 ```
 
 You can view the server at <http://localhost:3030>.
