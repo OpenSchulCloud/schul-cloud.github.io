@@ -6,8 +6,10 @@ author:
 - niccokunzmann
 ---
 
-I want to develo Schul-Cloud on my local Ubuntu virtual machine.
-Therefore I went through these steps:
+I want to develop Schul-Cloud on my local Ubuntu virtual machine.
+These are the steps I took.
+
+<!-- more -->
 
 ## Install node.js
 
