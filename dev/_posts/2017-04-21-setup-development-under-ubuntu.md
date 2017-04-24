@@ -234,7 +234,7 @@ variable for the login password.
 This is the password for `schueler@schul-cloud.org`.
 
 ```
-export SC_DEMO_USER_PASSWORD=schulcloud
+export SC_DEMO_USER_PASSWORD=test
 ```
 
 In the `schulcloud-client` directory, test the client by running this command:
