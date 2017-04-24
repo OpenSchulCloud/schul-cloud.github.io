@@ -27,7 +27,7 @@ You can choose one of these.
 [install-binary]: #installation-from-binary
 
 This can be found on the [node.js download page][node-download].
-I use version 6 LTS (Long Term Support).
+We use version 6 LTS (Long Term Support).
 
 ```shell
 wget https://nodejs.org/dist/v6.10.2/node-v6.10.2-linux-x64.tar.xz
@@ -93,7 +93,7 @@ These commands install the packages.
 
 ```shell
 sudo apt-get install -y build-essential
-( cd schulcloud-client && npm install && npm install -g nodemon gulp && npm install nodemon gulp )
+( cd schulcloud-client && npm install && npm install -g nodemon gulp )
 ( cd schulcloud-server && npm install )
 ```
 
@@ -119,7 +119,7 @@ In the shell, you can set the environment variables:
 ```
 export DB_USERNAME=
 export DB_PASSWORD=
-export DB_URL=mongodb://127.0.0.1/admin
+export DB_URL=mongodb://127.0.0.1/schulcloud                 # fail
 ```
 
 ## Seed the Database
@@ -135,7 +135,7 @@ To feed the database with some data for development, execute this command:
 You can start the Schul-Cloud server by running this command:
 
 ```shell
-( cd schulcloud-server && npm start )
+( cd schulcloud-server && npm run startd )
 ```
 
 Output:
@@ -159,6 +159,8 @@ You can stop the server by pressing *Control+C*.
 
 ## Test the Server
 
+**If you do not have an internet connection, more tests will fail.**
+
 In order to test the server, you can run
 
 ```shell
@@ -166,6 +168,22 @@ In order to test the server, you can run
 ```
 
 View the [example output][npm-test-server-output].
+
+This test sometimes fails:
+
+```
+  1) ITSLearning System should be able to retrieve username/hash/etc.:
+       ReferenceError: window is not defined
+    
+    - itslearning.js:9 ITSLearningLoginStrategy.getParameterByName
+      /home/coderdojo/schulcloud-server/src/services/account/strategies/itslearning.js:9:3297
+    
+    - itslearning.js:9 execFile.then.queryParams
+      /home/coderdojo/schulcloud-server/src/services/account/strategies/itslearning.js:9:2164
+    
+    - next_tick.js:135 process._tickDomainCallback
+      internal/process/next_tick.js:135:7 
+```
 
 
 ## Start the Client
@@ -229,12 +247,12 @@ The web page should look like this:
 
 ## Test the Client
 
-According to the [readme][test-client-readme], ew need to set an environment
+According to the [readme][test-client-readme], we need to set an environment
 variable for the login password.
 This is the password for `schueler@schul-cloud.org`.
 
 ```
-export SC_DEMO_USER_PASSWORD=test
+export SC_DEMO_USER_PASSWORD=schulcloud               # fail
 ```
 
 In the `schulcloud-client` directory, test the client by running this command:
