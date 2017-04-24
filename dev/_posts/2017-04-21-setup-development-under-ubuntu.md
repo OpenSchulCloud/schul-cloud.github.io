@@ -6,8 +6,8 @@ author:
 - niccokunzmann
 ---
 
-I want to develop Schul-Cloud on my local Ubuntu virtual machine.
-These are the steps I took.
+You want to develop Schul-Cloud on your local Ubuntu:
+These are the steps to take.
 
 <!-- more -->
 
@@ -15,6 +15,17 @@ These are the steps I took.
 
 `apt-get install npm` will not work as this installs an old version of node.
 We need a later version.
+
+There are different installation methods:
+
+- [Installation from downloaded binary][install-binary] (no administrator)
+- [Installation from package repository][install-package]
+
+You can choose one of these.
+
+### Node Installation from Binary
+[install-binary]: #installation-from-binary
+
 This can be found on the [node.js download page][node-download].
 I use version 6 LTS (Long Term Support).
 
@@ -22,21 +33,43 @@ I use version 6 LTS (Long Term Support).
 wget https://nodejs.org/dist/v6.10.2/node-v6.10.2-linux-x64.tar.xz
 tar -xf node-v6.10.2-linux-x64.tar.xz
 rm node-v6.10.2-linux-x64.tar.xz
-echo "export PATH=\"~/.npm-global/bin:/home/coderdojo/node-v6.10.2-linux-x64/bin:\$PATH\"" >> ~/.bashrc
-mkdir ~/.npm-global
+echo "export PATH=\"~/node-v6.10.2-linux-x64/bin:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-`~/.npm-global` is the global install directory according to
-[the fix for the default directory][fix-default].
+### Node Installation from Package Repository
+[install-package]: #node-installation-from-package-repository
 
-Now, I can use the `npm` command in the terminal.
+Nodejs and the Node Package Manager can be installed using Apt.
+Execute these commands to install:
+
+```shell
+wget https://deb.nodesource.com/setup_6.x -O nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt-get -y install nodejs
+```
+
+## Check the npm Installation
+
+You can use the `npm` command in the terminal, to check if the installation worked.
 
 ```shell
 $ npm
 
 Usage: npm <command>
 [...]
+```
+
+## Set Global Install Directory
+
+`~/.npm-global` should be the global install directory according to
+[the fix for the default directory][fix-default].
+
+```shell
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+echo "export PATH=\"~/.npm-global/bin:\$PATH\"" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Download the Repositories
@@ -49,7 +82,7 @@ sudo apt-get -y install git
 
 And you need to clone the repositories:
 
-```
+```shell
 git clone https://github.com/schul-cloud/schulcloud-client.git
 git clone https://github.com/schul-cloud/schulcloud-server.git
 ```
@@ -59,7 +92,8 @@ git clone https://github.com/schul-cloud/schulcloud-server.git
 These commands install the packages.
 
 ```shell
-( cd schulcloud-client && npm install && npm install -g nodemon gulp )
+sudo apt-get install -y build-essential
+( cd schulcloud-client && npm install && npm install -g nodemon gulp && npm install nodemon gulp )
 ( cd schulcloud-server && npm install )
 ```
 
@@ -80,33 +114,20 @@ mkdir ~/db
 mongod --dbpath ~/db &
 ```
 
-We have to create a user. Start the mongo shell
-([source](http://stackoverflow.com/a/38921949/1320237)):
+In the shell, you can set the environment variables:
+
+```
+export DB_USERNAME=
+export DB_PASSWORD=
+export DB_URL=mongodb://127.0.0.1/admin
+```
+
+## Seed the Database
+
+To feed the database with some data for development, execute this command:
 
 ```shell
-mongo --port 27017
-```
-
-Now, in the shell, add the user `myUserAdmin` with the password `abc123`.
-
-```js
-use admin
-db.createUser(
-  {
-    user: "myUserAdmin",
-    pwd: "abc123",
-    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
-  }
-)
-exit
-```
-
-Now, in the shell, you can setthe environment variables:
-
-```
-export DB_USERNAME=myUserAdmin
-export DB_PASSWORD=abc123
-export DB_URL=mongodb://127.0.0.1/admin
+( cd schulcloud-server && npm run setup )
 ```
 
 ## Start the Server
@@ -119,7 +140,7 @@ You can start the Schul-Cloud server by running this command:
 
 Output:
 ```
-> schulcloud@0.0.0 start /home/coderdojo/schulcloud-server
+> schulcloud@0.0.0 start ~/schulcloud-server
 > node src/
 
 warn: The AWS config couldn't be read
@@ -141,14 +162,17 @@ You can stop the server by pressing *Control+C*.
 In order to test the server, you can run
 
 ```shell
-npm test
+( cd schulcloud-server && npm test )
 ```
 
-in the `schulcloud-server` directory.
 View the [example output][npm-test-server-output].
 
 
 ## Start the Client
+
+```shell
+cd schulcloud-client
+```
 
 According to the [documentation][docu-client-snap], we need to run these commands:
 
@@ -188,7 +212,7 @@ npm run watch
 Output: 
 
 ```
-> schulcloud-express@0.0.0 watch /home/user/schulcloud-client
+> schulcloud-express@0.0.0 watch ~/schulcloud-client
 > nodemon --watch . ./bin/www
 
 [nodemon] 1.11.0
@@ -204,6 +228,14 @@ The web page should look like this:
 ![](/assets/img/schulcloud-client-website.png)
 
 ## Test the Client
+
+According to the [readme][test-client-readme], ew need to set an environment
+variable for the login password.
+This is the password for `schueler@schul-cloud.org`.
+
+```
+export SC_DEMO_USER_PASSWORD=schulcloud
+```
 
 In the `schulcloud-client` directory, test the client by running this command:
 
@@ -227,3 +259,4 @@ View the [example output][npm-test-client-output].
 [node-download]: https://nodejs.org/en/download/
 [npm-test-server-output]: /assets/output/schulcloud-server-npm-test-output.txt
 [npm-test-client-output]: /assets/output/schulcloud-client-npm-test-output.txt
+[test-client-readme]: https://github.com/schul-cloud/schul-cloud.github.io/pull/43#issuecomment-296305243
