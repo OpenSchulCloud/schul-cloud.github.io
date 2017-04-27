@@ -128,7 +128,8 @@ Here, we want to discuss, how to go on implementing.
 - **Define the APIs.**  
   We need to define our first version of the Search API and the Ressources API.
   This allows us developers to talk about an API and requirements instead of understanding the code.
-  Previous work has been done which can imfluence the first specification.
+  Previous work has been done which can imfluence the first specification.  
+  [**Repository**][apiv1]
 - **Implement elastisearch**  
   Currentlly, there is an implementation of the [elastisearch engine][content-api].
   We need to make sure, it works with the specified APIs.
@@ -138,3 +139,4 @@ Here, we want to discuss, how to go on implementing.
 
 [content-crawler]: https://github.com/schul-cloud/schulcloud-content-crawler#clients
 [content-api]: https://github.com/schul-cloud/schulcloud-content-api
+[apiv1]: https://github.com/schul-cloud/ressources-api-v1
