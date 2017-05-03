@@ -87,6 +87,8 @@ git clone https://github.com/schul-cloud/schulcloud-client.git
 git clone https://github.com/schul-cloud/schulcloud-server.git
 ```
 
+You can clone them to any directory you like.
+
 ## Install the Packages
 
 These commands install the packages.
@@ -96,6 +98,12 @@ sudo apt-get install -y build-essential
 ( cd schulcloud-client && npm install && npm install -g nodemon gulp )
 ( cd schulcloud-server && npm install )
 ```
+
+Explanation:
+- The commands are in brackets because this launches a new shell process and
+  the whole tutorial can be executed from the same folder.
+- `build-essential` is used to compile binary libraries for node.
+  If you have already installed it, you do not need to install it again.
 
 ## Install Mongo DB
 
