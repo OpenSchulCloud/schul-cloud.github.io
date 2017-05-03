@@ -53,11 +53,17 @@ Hier wird gesammelt, was du als Entwickeler von Schul-Cloud dafür tun kannst:
 
 ### Issues erstellen
 
-Das Label `nur-für-einsteiger` für [Einsteigerissues][einsteigerissues].
+Das Label `first-timers-only` für [Einsteigerissues][einsteigerissues].
 Das sind geeignete Issues für Einsteiger:
 
 - Alles, was nicht so wichtig ist, dich aber nur eine Minute kostet, es zu beheben
 - Du hast mindestens einen Test geschrieben aber noch nicht implementiert. Kommentiere ihn aus und Verweise darauf, dass er grün gemacht werden soll.
+
+In der Issue sollte stehen:
+
+- Welches Problem wird gelöst?
+- Wie kann das Problem gelöst werden?
+- Welche Dateien werden dabei angefasst?
 
 [portal]: https://schul-cloud.github.io
 [einsteigerissues]: https://github.com/search?utf8=%E2%9C%93&q=label%3Anur-f%C3%BCr-einsteiger+is%3Aopen&type=Issues&ref=searchresults
