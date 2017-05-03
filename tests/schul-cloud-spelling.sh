@@ -3,9 +3,13 @@
 cd "`dirname \"$0\"`"
 cd ..
 
+#
+# All lines in the exlude variable are ignored during spell check.
+#
 exclude="# fail
 schulcloud-
-.git/"
+.git/
+# ;)"
 
 if grep -riE 'schul(([^0-9a-zA-Z-])+|([[^:space:-]])*|[[:space:]]+-[[:space:]]*|[[:space:]]*-[[:space:]]+)cloud|shcul' | grep -vF "$exclude" # fail
 then
