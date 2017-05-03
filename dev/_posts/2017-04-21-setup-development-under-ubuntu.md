@@ -122,12 +122,18 @@ mkdir ~/db
 mongod --dbpath ~/db &
 ```
 
-In the shell, you can set the environment variables:
+In the shell, you can set the environment variable to connect to the database:
+
+```
+export DB_URL=mongodb://127.0.0.1/schulcloud                 # fail
+```
+
+If you have protected your database with a user name and a password,
+you can set these additional environment variables:
 
 ```
 export DB_USERNAME=
 export DB_PASSWORD=
-export DB_URL=mongodb://127.0.0.1/schulcloud                 # fail
 ```
 
 ## Seed the Database
