@@ -1,7 +1,7 @@
 ---
 layout: page
 title: schul-cloud
-language: en
+language: de
 ---
 
 
@@ -19,6 +19,9 @@ Es ist der Ort für Entwickler der Schul-Cloud:
 Wo bekomme ich Hilfe zu Schul-Cloud?
 ------------------------------------
 [hilfe]: #wo-bekomme-ich-hilfe-zu-schul-cloud
+
+Du kannst eine [Issue öffnen][new-issue] und fragen.
+Es gibt ein [Blog][blog] und [Wikiseiten][wiki-1] mit Tipps.
 
 Wie kann ich bei Schul-Cloud mitmachen?
 ---------------------------------------
@@ -69,3 +72,6 @@ In der Issue sollte stehen:
 [einsteigerissues]: https://github.com/search?utf8=%E2%9C%93&q=label%3Anur-f%C3%BCr-einsteiger+is%3Aopen&type=Issues&ref=searchresults
 [blog-posts]: https://github.com/schul-cloud/schul-cloud.github.io/blob/master/dev/_posts
 [blog]: dev
+[new-issue]: 
+[wiki-1]: https://github.com/schul-cloud/schulcloud-server/wiki/
+[new-issue]: https://github.com/schul-cloud/schul-cloud.github.io/issues/new
