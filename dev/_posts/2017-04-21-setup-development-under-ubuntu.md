@@ -125,7 +125,7 @@ mongod --dbpath ~/db &
 In the shell, you can set the environment variable to connect to the database:
 
 ```
-export DB_URL=mongodb://127.0.0.1/schulcloud                 # fail
+export DB_URL=mongodb://127.0.0.1/schulcloud                 # ;)
 ```
 
 If you have protected your database with a user name and a password,
