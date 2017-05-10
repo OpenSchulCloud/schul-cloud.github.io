@@ -138,6 +138,15 @@ export DB_PASSWORD=
 
 ## Seed the Database
 
+Before feed the database create an unser on the database in mongo: 
+```mongo
+use schulcloud;
+
+db.createUser({user:"username", pwd: "pwd", roles:[{role:"dbOwner", db: "schulcloud"}]});
+
+```
+Username musst be the systemuser!
+
 To feed the database with some data for development, execute this command:
 
 ```shell
@@ -174,6 +183,17 @@ You can stop the server by pressing *Control+C*.
 ## Test the Server
 
 **If you do not have an internet connection, more tests will fail.**
+
+
+Before the first run of test create an unser on the database in mongo: 
+```mongo
+use schulcloud-test;
+
+db.createUser({user:"username", pwd: "pwd", roles:[{role:"dbOwner", db: "schulcloud-test"}]});
+
+```
+Username musst be the systemuser!
+
 
 In order to test the server, you can run
 
