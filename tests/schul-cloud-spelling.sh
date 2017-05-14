@@ -9,6 +9,9 @@ cd ..
 exclude="# fail
 schulcloud-
 .git/
+schulcloud;
+/schulcloud
+\"schulcloud
 # ;)"
 
 if grep -riE 'schul(([^0-9a-zA-Z-])+|([[^:space:-]])*|[[:space:]]+-[[:space:]]*|[[:space:]]*-[[:space:]]+)cloud|shcul' | grep -vF "$exclude" # fail
