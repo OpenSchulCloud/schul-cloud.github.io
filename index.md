@@ -69,7 +69,7 @@ In der Issue sollte stehen:
 - Welche Dateien werden dabei angefasst?
 
 [portal]: https://schul-cloud.github.io
-[einsteigerissues]: https://github.com/search?utf8=%E2%9C%93&q=label%3Anur-f%C3%BCr-einsteiger+is%3Aopen&type=Issues&ref=searchresults
+[einsteigerissues]: https://github.com/search?utf8=%E2%9C%93&q=org%3Aschul-cloud+state%3Aopen+label%3A%22first-timers-only%22&type=Issues&ref=searchresults
 [blog-posts]: https://github.com/schul-cloud/schul-cloud.github.io/blob/master/dev/_posts
 [blog]: dev
 [wiki-1]: https://github.com/schul-cloud/schulcloud-server/wiki/
