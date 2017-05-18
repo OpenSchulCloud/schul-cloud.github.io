@@ -110,6 +110,21 @@ npm WARN deprecated feathers-mongoose@3.6.2: Upgrade to the lates version of fea
 [                ..] - extract:source-map: sill gunzTarPerm modified mode [ 'test/vectors/byte0066.dat', 493, 511 ]
 ```
 
+If your installation fails, please see if you installed the correct node version.
+I get this output, which says that node 7 is not supported.
+```
+npm WARN deprecated graceful-fs@1.2.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-f
+```
+
+Test your node version:
+```
+>npm  --version
+3.10.10
+
+>node --version
+v6.10.3
+```
+
 You can view the whole output in [here]({{ outputs }}/windows-schulcloud-server-npm-install-output.txt).
 
 Next, we need to install `nodemon` and `gulp` to update the running server without restarting when editing the source code.
@@ -138,13 +153,122 @@ C:\Users\username>cd schulcloud-client
 
 Now, install the packages as before.
 ```
+C:\Users\username\schulcloud-client>npm install
 ```
 
+You can view the output [here]({{ outputs }}/windows-schulcloud-client-npm-install-output.txt)
 
 ## Seed the Database
 
+Have a look if your mongodb installation is in this folder:
+```
+C:\Program Files\MongoDB\Server\3.4\bin
+```
+It looks like this to me.
+![]({{ images }}/06-01-seed-db.png)
+
+The database needs a directory for the data to store.
+We will keep it in your home directory `%USERPROFILE%`.
+
+Make sure, this is the place you want it to go:
+```
+C:\Users\username>echo %USERPROFILE%
+C:\Users\username
+
+```
+
+Now, create the database directory and run the database.
+
+```
+C:\Users\username>mkdir "%USERPROFILE%\db"
+
+C:\Users\username>"C:\Program Files\MongoDB\Server\3.4\bin\mongod" --dbpath "%USERPROFILE%\db"
+2017-05-18T11:45:53.165+0200 I CONTROL  [initandlisten] MongoDB starting : pid=92848 port=27017 dbpath=C:\Users\username\db 64-bit host=strauch
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten] db version v3.4.4
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten] git version: 888390515874a9debd1b6c5d36559ca86b44babd
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten] modules: none
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten] build environment:
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten]     distarch: x86_64
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-05-18T11:45:53.166+0200 I CONTROL  [initandlisten] options: { storage: { dbPath: "C:\Users\username\db" } }
+2017-05-18T11:45:53.168+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4451M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics
+=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-05-18T11:45:53.201+0200 I CONTROL  [initandlisten]
+2017-05-18T11:45:53.201+0200 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-05-18T11:45:53.201+0200 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-05-18T11:45:53.202+0200 I CONTROL  [initandlisten]
+2017-05-18T11:45:53.202+0200 I CONTROL  [initandlisten] Hotfix KB2731284 or later update is not installed, will zero-out data files.
+2017-05-18T11:45:53.202+0200 I CONTROL  [initandlisten]
+2017-05-18T11:45:54.534+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/username/db/diagnostic.data'
+2017-05-18T11:45:54.545+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system
+.version" }
+2017-05-18T11:45:54.545+0200 I INDEX    [initandlisten]          building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-05-18T11:45:54.547+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2017-05-18T11:45:54.548+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2017-05-18T11:45:54.549+0200 I NETWORK  [thread1] waiting for connections on port 27017
+```
+
+Now, the database is running.
+
+In an other console window, we need to log in and create the database for the server.
+
+Execute this command to log into the database and open the command shell of the database:
 
 
+```
+C:\Users\username>"C:\Program Files\MongoDB\Server\3.4\bin\mongo"
+MongoDB shell version v3.4.4
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.4.4
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+Questions? Try the support group
+        http://groups.google.com/group/mongodb-user
+Server has startup warnings:
+2017-05-18T11:45:53.201+0200 I CONTROL  [initandlisten]
+2017-05-18T11:45:53.201+0200 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-05-18T11:45:53.201+0200 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-05-18T11:45:53.202+0200 I CONTROL  [initandlisten]
+2017-05-18T11:45:53.202+0200 I CONTROL  [initandlisten] Hotfix KB2731284 or later update is not installed, will zero-out data files.
+2017-05-18T11:45:53.202+0200 I CONTROL  [initandlisten]
+> 
+```
+
+Now, use these commands to create the user `username` with the password `pwd`: 
+
+```
+use schulcloud;
+```
+and 
+
+```
+db.createUser({user:"username", pwd: "pwd", roles:[{role:"dbOwner", db: "schulcloud"}]});
+```
+
+Output:
+
+```
+> use schulcloud;
+switched to db schulcloud
+> db.createUser({user:"username", pwd: "pwd", roles:[{role:"dbOwner", db: "schulcloud"}]});
+Successfully added user: {
+        "user" : "username",
+        "roles" : [
+                {
+                        "role" : "dbOwner",
+                        "db" : "schulcloud"
+                }
+        ]
+}
+> exit
+bye
+```
 
 ## Start the Server
 

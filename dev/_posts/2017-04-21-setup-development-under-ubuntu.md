@@ -138,6 +138,13 @@ export DB_PASSWORD=
 
 ## Seed the Database
 
+Have a look if your mongodb installation is in this folder:
+```
+C:\Program Files\MongoDB\Server\3.4\bin
+```
+It looks like this to me.
+
+
 Before feed the database create an unser on the database in mongo: 
 ```mongo
 use schulcloud;
