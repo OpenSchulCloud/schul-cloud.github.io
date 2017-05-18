@@ -4,6 +4,8 @@ title: schul-cloud
 language: de
 ---
 
+![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=YUtLUkI4RnI3T1dneHhLM0dpUjBRVVhUbG9tWFlRU3VkZS9MOEFJY0NNcz0tLWY0ZjFwV3BKb2E1Y3VHdXBjS1NuZUE9PQ==--4071bcd5f79b0aa168ca3ee05f763ccd222a3581)
+
 
 Es ist der Ort für Einsteiger und Erstentwickler:
 
