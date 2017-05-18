@@ -256,7 +256,7 @@ Output:
 
 ```
 > use schulcloud;
-switched to db schulcloud
+switched to db "schulcloud"
 > db.createUser({user:"username", pwd: "pwd", roles:[{role:"dbOwner", db: "schulcloud"}]});
 Successfully added user: {
         "user" : "username",
