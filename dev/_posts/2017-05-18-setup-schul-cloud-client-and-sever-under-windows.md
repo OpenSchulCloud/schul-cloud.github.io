@@ -240,7 +240,8 @@ Server has startup warnings:
 > 
 ```
 
-Now, use these commands to create the user `username` with the password `pwd`: 
+Now, use the following commands to create the user `username` with the password `pwd`.
+While doing this, you can notice output in the `mongod` window.
 
 ```
 use schulcloud;
@@ -270,14 +271,102 @@ Successfully added user: {
 bye
 ```
 
+Now, we need to put test data into the database in the server directory:
+
+```
+C:\Users\username>dbseed.bat
+```
+
+Note: if this file is not present, you can get it from [here](https://github.com/schul-cloud/schulcloud-server/pull/165).
+
+
 ## Start the Server
 
+Make sure that the database is runnning.
+Now, you can start the server.
+
+```
+C:\Users\username\schulcloud-server>npm run startd
+
+> schulcloud@0.0.0 startd C:\Users\username\schulcloud-server
+> nodemon src/
+
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node src/`
+warn: The AWS config couldn't be read
+[Thu May 18 2017 13:28:09] [LOG]   Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
+[Thu May 18 2017 13:28:10] [LOG]   Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
+[Thu May 18 2017 13:28:10] [LOG]   Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
+[Thu May 18 2017 13:28:10] [LOG]   Mongoose option.lean is false. Use hook.results.toObject() to convert the results to JS objects
+[Thu May 18 2017 13:28:11] [LOG]   info:    Schul-Cloud application started on http://localhost:3030
+```
+
+You can now visit the server at http://localhost:3030
+It should look like this:
+
+![]({{ images }}/07-01-start-server.png)
 
 ## Test the Server
 
+The server can be tested.
+
+The lint tests test if the source code is consistent in style.
+
+```
+C:\Users\username\schulcloud-server>npm run lint
+
+> schulcloud@0.0.0 lint C:\Users\username\schulcloud-server
+> eslint ./src ./test --ext .js --fix
+
+```
+
+The other tests do not work under Windows (2017/May/18).
+```
+C:\Users\username\schulcloud-server>npm run test
+```
 
 ## Start the Client
 
+When the server and the database are running, the client can be started.
+Open a third command line window at the client.
+
+This command compiles the changed files as soon as you edit them.
+```
+C:\Users\username\schulcloud-client>gulp watch
+```
+You can view the output [here]({{ outputs }}/windows-gulp-watch-output.txt).
+
+Now, you open another window to run the client.
+```
+C:\Users\username\schulcloud-client>npm run watch
+
+> schulcloud-express@0.0.0 watch C:\Users\username\schulcloud-client
+> nodemon --watch ./ --watch views/ --watch controllers/ --watch build/ ./bin/www
+
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: C:\Users\username\schulcloud-client/**/* C:\Users\username\schulcloud-client\views/**/* C:\Users\cheche\Documents\programmi
+ertes\schulcloud-client\controllers/**/* C:\Users\username\schulcloud-client\build/**/*
+[nodemon] starting `node ./bin/www`
+Listening on port 3100
+```
+
+The client starts at http://localhost:3100
+
+![]({{ images }}/07-01-start-server.png)
 
 ## Test the Client
 
+TODO. Please edit this page -.o
+
+## Create a pull-request
+
+If you want to contribute to Schul-Cloud, you need to for the repositories.
+
+- [for schulcloud-server](https://github.com/niccokunzmann/schulcloud-server/fork)
+- [for schulcloud-client](https://github.com/niccokunzmann/schulcloud-client/fork)
+
+Then, pull and push the changes, ask if you do not know it, how to create a pull-request and
+fill this document for others.
