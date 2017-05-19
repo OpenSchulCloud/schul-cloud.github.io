@@ -94,7 +94,7 @@ Here, you can switch between the repositories.
 
 ![]({{ images }}/05-01-install-packages.png)
 
-The command promt opens.
+The command prompt opens.
 
 Type in 
 ```
