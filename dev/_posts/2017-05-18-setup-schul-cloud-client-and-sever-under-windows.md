@@ -52,7 +52,7 @@ https://nodejs.org/en/download/
 
 Git is the version control system (VCS) we use to exchange the source code
 and write several versions of it.
-All the Schul-Cloud repositotries are hosted on [Github](https://github.com/schul-cloud).
+All the Schul-Cloud repositories are hosted on [Github](https://github.com/schul-cloud).
 
 Install Github Desktop
 
