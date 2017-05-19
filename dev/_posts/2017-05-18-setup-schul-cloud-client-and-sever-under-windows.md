@@ -282,7 +282,7 @@ Note: if this file is not present, you can get it from [here](https://github.com
 
 ## Start the Server
 
-Make sure that the database is runnning.
+Make sure that the database is running.
 Now, you can start the server.
 
 ```
