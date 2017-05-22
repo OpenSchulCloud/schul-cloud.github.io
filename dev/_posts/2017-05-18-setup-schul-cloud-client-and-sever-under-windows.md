@@ -21,7 +21,7 @@ These are the steps to take.
 Mongodb is the database for the server. All data is stored there.
 
 Download Mongo DB from 
-https://www.mongodb.com/download-center#community
+<https://www.mongodb.com/download-center#community>
 
 ![]({{ images }}/01-01-download-db.png)
 ![]({{ images }}/01-02-download-db.png)
@@ -36,7 +36,7 @@ https://www.mongodb.com/download-center#community
 The client and server are written in Node.JS, JavaScript.
 
 Go to 
-https://nodejs.org/en/download/
+<https://nodejs.org/en/download/>
 
 
 ![]({{ images }}/02-01-install-node-js.png)
@@ -56,7 +56,7 @@ All the Schul-Cloud repositotries are hosted on [Github](https://github.com/schu
 
 Install Github Desktop
 
-https://desktop.github.com/
+<https://desktop.github.com/>
 
 ![]({{ images }}/03-01-install-git.png)
 ![]({{ images }}/03-02-install-git.png)
@@ -71,7 +71,7 @@ I chose the login:
 
 ![]({{ images }}/04-01-clone-repo.png)
 
-Repository URL: https://github.com/schul-cloud/schulcloud-client  
+Repository URL: <https://github.com/schul-cloud/schulcloud-client>  
    
 ![]({{ images }}/04-02-clone-repo.png)
 1. Enter `schul-cloud/schulcloud-client  `
@@ -81,7 +81,7 @@ Repository URL: https://github.com/schul-cloud/schulcloud-client
 
 Now, we are going to do the same for the server repository:
 
-Repository URL: https://github.com/schul-cloud/schulcloud-server  
+Repository URL: <https://github.com/schul-cloud/schulcloud-server>  
 ![]({{ images }}/04-04-clone-repo.png)
 ![]({{ images }}/04-05-clone-repo.png)
 
@@ -303,7 +303,7 @@ warn: The AWS config couldn't be read
 [Thu May 18 2017 13:28:11] [LOG]   info:    Schul-Cloud application started on http://localhost:3030
 ```
 
-You can now visit the server at http://localhost:3030
+You can now visit the server at <http://localhost:3030>
 It should look like this:
 
 ![]({{ images }}/07-01-start-server.png)
@@ -353,7 +353,7 @@ ertes\schulcloud-client\controllers/**/* C:\Users\username\schulcloud-client\bui
 Listening on port 3100
 ```
 
-The client starts at http://localhost:3100
+The client starts at <http://localhost:3100>
 
 ![]({{ images }}/07-01-start-server.png)
 
