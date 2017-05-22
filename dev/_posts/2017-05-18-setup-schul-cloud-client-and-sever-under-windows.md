@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: Schul-Cloud Setup for Windows Development
+title: Windows Setup for Schul-Cloud Development
 language: en
 author:
 - niccokunzmann
@@ -52,7 +52,7 @@ Go to
 
 Git is the version control system (VCS) we use to exchange the source code
 and write several versions of it.
-All the Schul-Cloud repositotries are hosted on [Github](https://github.com/schul-cloud).
+All the Schul-Cloud repositories are hosted on [Github](https://github.com/schul-cloud).
 
 Install Github Desktop
 
@@ -94,7 +94,7 @@ Here, you can switch between the repositories.
 
 ![]({{ images }}/05-01-install-packages.png)
 
-The command promt opens.
+The command prompt opens.
 
 Type in 
 ```
@@ -214,64 +214,7 @@ C:\Users\username>"C:\Program Files\MongoDB\Server\3.4\bin\mongod" --dbpath "%US
 
 Now, the database is running.
 
-In an other console window, we need to log in and create the database for the server.
-
-Execute this command to log into the database and open the command shell of the database:
-
-
-```
-C:\Users\username>"C:\Program Files\MongoDB\Server\3.4\bin\mongo"
-MongoDB shell version v3.4.4
-connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.4
-Welcome to the MongoDB shell.
-For interactive help, type "help".
-For more comprehensive documentation, see
-        http://docs.mongodb.org/
-Questions? Try the support group
-        http://groups.google.com/group/mongodb-user
-Server has startup warnings:
-2017-05-18T11:45:53.201+0200 I CONTROL  [initandlisten]
-2017-05-18T11:45:53.201+0200 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
-2017-05-18T11:45:53.201+0200 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
-2017-05-18T11:45:53.202+0200 I CONTROL  [initandlisten]
-2017-05-18T11:45:53.202+0200 I CONTROL  [initandlisten] Hotfix KB2731284 or later update is not installed, will zero-out data files.
-2017-05-18T11:45:53.202+0200 I CONTROL  [initandlisten]
-> 
-```
-
-Now, use the following commands to create the user `username` with the password `pwd`.
-While doing this, you can notice output in the `mongod` window.
-
-```
-use schulcloud;
-```
-and 
-
-```
-db.createUser({user:"username", pwd: "pwd", roles:[{role:"dbOwner", db: "schulcloud"}]});
-```
-
-Output:
-
-```
-> use schulcloud;
-switched to db "schulcloud"
-> db.createUser({user:"username", pwd: "pwd", roles:[{role:"dbOwner", db: "schulcloud"}]});
-Successfully added user: {
-        "user" : "username",
-        "roles" : [
-                {
-                        "role" : "dbOwner",
-                        "db" : "schulcloud"
-                }
-        ]
-}
-> exit
-bye
-```
-
-Now, we need to put test data into the database in the server directory:
+We need to put test data into the database in the server directory:
 
 ```
 C:\Users\username>dbseed.bat
@@ -282,7 +225,7 @@ Note: if this file is not present, you can get it from [here](https://github.com
 
 ## Start the Server
 
-Make sure that the database is runnning.
+Make sure that the database is running.
 Now, you can start the server.
 
 ```

@@ -4,8 +4,23 @@ title: schul-cloud
 language: de
 ---
 
+#### Status
 
-Es ist der Ort für Einsteiger und Erstentwickler:
+Browser UAT: ![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=YUtLUkI4RnI3T1dneHhLM0dpUjBRVVhUbG9tWFlRU3VkZS9MOEFJY0NNcz0tLWY0ZjFwV3BKb2E1Y3VHdXBjS1NuZUE9PQ==--4071bcd5f79b0aa168ca3ee05f763ccd222a3581)
+
+Schul-Cloud Client (Web UI): ![Travis Status](https://travis-ci.org/schul-cloud/schulcloud-client.svg?branch=production)
+
+Benachrichtigungs-Dienst: [![Travis Status](https://travis-ci.org/schul-cloud/node-notification-service.svg?branch=master)](https://travis-ci.org/schulcloud/node-notification-service) [![Code Coverage](https://img.shields.io/codecov/c/github/schul-cloud/node-notification-service/master.svg)](https://codecov.io/gh/schul-cloud/node-notification-service)
+
+Kalender-Dienst: [![Travis Status](https://travis-ci.org/schul-cloud/schulcloud-calendar.svg?branch=master)](https://travis-ci.org/schul-cloud/schulcloud-calendar)
+
+Schul-Cloud Server: ![Travis Status](https://travis-ci.org/schul-cloud/schulcloud-server.svg?branch=production)
+[![Code Coverage](https://img.shields.io/codecov/c/github/schul-cloud/schulcloud-server/master.svg)](https://codecov.io/github/schulcloud/schulcloud-server?branch=master)
+[![Version](https://img.shields.io/github/release/schul-cloud/schulcloud-server.svg)](https://github.com/schulcloud/schulcloud-server/releases)
+
+#### Einsteigen
+
+Dieses sind gute Startpunkte für Einsteiger und Erstentwickler:
 
 - [um Hilfe zu ihren Projekten mit der Schul-Cloud zu erhalten][hilfe]
 - [um zur Schul-Cloud beizutragen][mitmachen]
