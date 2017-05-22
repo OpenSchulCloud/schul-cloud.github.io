@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: Setup Schul-Cloud for Development under Ubuntu
+title: Schul-Cloud Setup for Ubuntu Development
 language: en
 author:
 - niccokunzmann

@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: Setup Schul-Cloud for Development under Ubuntu
+title: Schul-Cloud Setup for Windows Development
 language: en
 author:
 - niccokunzmann
@@ -12,8 +12,8 @@ These are the steps to take.
 
 <!-- more -->
 
-{{ assign images = "/assets/img/windows-setup" }}
-{{ assign outputs = "/assets/output" }}
+{% assign images = "/assets/img/windows-setup" %}
+{% assign outputs = "/assets/output" %}
 
 
 ## Install Mongo DB
@@ -62,10 +62,10 @@ https://desktop.github.com/
 ![]({{ images }}/03-02-install-git.png)
 
 Log in to github (2) or create your GitHub Account first (1):
-![]({{ images }}/03-02-install-git.png)
+![]({{ images }}/03-03-install-git.png)
 
 I chose the login:
-![]({{ images }}/03-02-install-git.png)
+![]({{ images }}/03-04-install-git.png)
 
 ## Download the Repositories
 
