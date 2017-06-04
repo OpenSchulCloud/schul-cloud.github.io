@@ -118,7 +118,7 @@ In this chapter, we show how the forces shape the architecture.
    This way, no external person can access the user data.  
    In general, Schul-Cloud uses OAuth which reduces the user to a random identifier for the services.
 6. **Closed knowledge shall be kept secret.**  
-   
+   See [the discuttion](https://github.com/schul-cloud/resources-api-v1/issues/51).
 
 ## Plan of Implementation
 
