@@ -20,7 +20,7 @@ Komplexität.
 Ein Projekt mit den verschiedenen Anbietern zusammen zu bringen,
 ist also schwierig.
 Die hier vorgestellten Kommunikationsebenen sollen dazu dienen,
-die Komplexität zu begeifen.
+die Komplexität zu begreifen.
 
 
 Im Folgenden bezieht sich "wir" auf Schul-Cloud-Team und Content-Anbieter.
@@ -93,7 +93,7 @@ zum Schließen der Issues geschrieben werden.
 
 ## Blog
 
-Es gibt einen [Entwicklerbog][blog] hier werden Entwurfsentscheidungen abgelegt.
+Es gibt einen [Entwicklerbog][blog], wo auch Entwurfsentscheidungen abgelegt werden.
 Das ermöglicht, über diese zu reden, sie zu referenzieren, gemeinsam zu schreiben und zu verbessern.
 Schul-Cloud-Externe sind eingeladen zu diesem Blog beizutragen.
 
@@ -118,7 +118,7 @@ Ich hoffe, dass die Formulierung der API als Tests ermöglicht, diese für viele
 Dienste automatisiert nutzbar zu machen.
 Bei der Implementierung der Tests und der Dienste wird klar, wo die Spezifikation
 Lücken hat.
-Diese können in [Issues][issues] Thematisiert und behoben werden.
+Diese können in [Issues][issues] thematisiert und behoben werden.
 
 ## Zusammenfassung
 
