@@ -6,10 +6,10 @@ author:
 - niccokunzmann
 ---
 
-Dieser Text stellt die Hearusforderungen und Möglichkeiten vor,
+Dieser Text stellt die Herausforderungen und Möglichkeiten vor,
 wie Nutzer selbst User-Stories ausformulieren und so stückweit der Entwicklung und den 
 Entwickler näher kommen.
-Wie das genau gestaltet wird ist unklar und Feedback von Nutzern, Lehrern und Schülern ist nötig.
+Wie das genau gestaltet wird, ist unklar. Feedback von Nutzern, Lehrern und Schülern ist nötig.
 
 <!-- more -->
 
@@ -65,7 +65,7 @@ Diese Fragen sollten bestenfalls mit den Betroffenen geklärt werden.
 Dennoch fallen sie oft erst dann auf, wenn der Entwickler schreibt und feststellt,
 dass er viele oder keine Möglichkeiten hat, das Beschriebene umzusetzen.
 Dass Nutzer und Programmierer sich austauschen können,
-möchte ich im Folgenden als einen Kommunikaitonskanal vorstellen.
+möchte ich im Folgenden als einen Kommunikationskanal vorstellen.
 
 Deutsche Tests
 --------------
@@ -172,7 +172,7 @@ Hier möchte ich die Tests aus zwei Perspektiven beleuchten:
     Wir können verschiedene, bestenfalls offene Kommunikationskanäle verwenden und über die Tests reden.
     Diese gibt es vielleicht schon, sind der Online-Kurs, Mailinglisten, Treffen und mehr.
     Zusätzlich kommt noch hinzu, dass die Plattform GitHub Issues bereit stellt, in denen über
-    die Tests, die Imlplementierung und das Formulieren der Tests gesprochen werden kann. 
+    die Tests, die Implementierung und das Formulieren der Tests gesprochen werden kann. 
 2. Als Anlernmöglichkeit zum Beitragen  
     Wenn Nutzer ihre eigenen User-Stories schreiben können, können sie
     - andere anlernen
@@ -201,7 +201,7 @@ am meisten Spaß.
 Aussicht
 --------
 
-Ich brauche drei Lehrer, die es interessiert, mit mir über den Beitragsprozess zu reden.
+Ich würde mir wünschen, dass sich drei Lehrer fänden, die mit mir über den Beitragsprozess reden.
 
 [gherkin]: https://github.com/cucumber/cucumber/wiki/Gherkin
 [fowler-1]: https://martinfowler.com/bliki/BusinessReadableDSL.html
