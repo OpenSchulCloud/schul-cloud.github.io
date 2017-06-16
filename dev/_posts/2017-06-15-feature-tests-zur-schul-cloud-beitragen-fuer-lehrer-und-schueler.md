@@ -6,13 +6,18 @@ author:
 - niccokunzmann
 ---
 
-Die Schul-Cloud stellt einige Features und Navigationsmöglichkeiten bereit.
-Wenn Lehrer und Schüler die Schul-Cloud benutzen, kommen ihnen neue Ideen, 
-wie die Oberfläche umgestaltet werden kann.
-Hier stellen wir vor, wie Lehrer und Schüler direkt ihre Wünsche formulieren können, 
-sodass minimale Zeit vergeht, bis diese zum Test für die Schul-Cloud bereit stehen.
+Dieser Text stellt die Hearusforderungen und Möglichkeiten vor,
+wie Nutzer selbst User-Stories ausformulieren und so stückweit der Entwicklung und den 
+Entwickler näher kommen.
+Wie das genau gestaltet wird ist unklar und Feedback von Nutzern, Lehrern und Schülern ist nötig.
 
 <!-- more -->
+
+Die Schul-Cloud stellt Features und Navigationsmöglichkeiten bereit.
+Wenn Lehrer und Schüler die Schul-Cloud benutzen, kommen ihnen neue Ideen, 
+wie die Oberfläche umgestaltet werden kann.
+User-Stories halten diese fest, damit sie implementiert werden können.
+
 
 Von der User-Story zum Feature
 ------------------------------
@@ -20,7 +25,7 @@ Von der User-Story zum Feature
 Wenn Schüler oder Lehrer Wünsche für neue Funktionen in der Schul-Cloud haben,
 dann können sie diese als User-Story formulieren.
 
-Auf http://tickets.schul.tech gibt es eine Annsammlung von User-Stories.
+Auf http://tickets.schul.tech gibt es eine Ansammlung von User-Stories.
 Eine beispielhafte User-Story würde so aussehen:
 
 1. User-Story
@@ -60,7 +65,7 @@ Diese Fragen sollten bestenfalls mit den Betroffenen geklärt werden.
 Dennoch fallen sie oft erst dann auf, wenn der Entwickler schreibt und feststellt,
 dass er viele oder keine Möglichkeiten hat, das Beschriebene umzusetzen.
 Dass Nutzer und Programmierer sich austauschen können,
-möchte ich im Folgenden einen Kommunikaitonskanal vorstellen.
+möchte ich im Folgenden als einen Kommunikaitonskanal vorstellen.
 
 Deutsche Tests
 --------------
@@ -132,7 +137,7 @@ Die Tests haben folgende Eigenschaften:
 
 Die Schul-Cloud hat viele Nutzer aber wenige Entwickler.
 Dieses Ungleichgewicht, verbunden mit der Schwierigkeit, Tests zu schreiben,
-die eindeutig sind, sorgt dafür, dass Features selektiert werden müssen.
+die eindeutig sind, sorgt dafür, dass Features ausgewählt werden müssen.
 Je mehr Features gewünscht sind bei gleicher Entwicklerzahl, desto mehr fallen raus.
 
 Viel Zeit der Entwickler steckt bei der Interpretation der Features und
@@ -144,22 +149,59 @@ Die zentrale These dieses Dokumentes ist es:
 
 [Martin Fowler][fowler-1] schreibt dazu:
 
-> This isn't to say that there's no benefit in a business-writable DSL. Indeed a couple of years ago some colleagues of mine built a system that included just that, and it was much appreciated by the business. It's just that the effort in creating a decent editing environment, meaningful error messages, debugging and testing tools raises the cost significantly.
+> This isn't to say that there's no benefit in a business-writable DSL.
+> Indeed a couple of years ago some colleagues of mine built a system that included just that,
+> and it was much appreciated by the business.
+> It's just that the effort in creating a decent editing environment, meaningful error messages,
+> debugging and testing tools raises the cost significantly.
 
 Kurz: Eine Sprache, eine Umgebung, Fehlernachrichten und Fehlerfinden zu erschaffen, ist teuer.
+Die Frage ist, was ist wirklich wichtig.
 
 Der Beitragsprozess für die Tests
 ---------------------------------
 
 In meiner [Masterarbeit][masterarbeit] beschäftige ich mich damit,
 wie ich die Einstiegshürden in die Entwicklung der Schul-Cloud senken kann.
-Dabei stelle ich fest, dass viele Programmier-Hürden eigendlich Kommunkataionshürden sind.
-Im Folgenden möchte ich die Tests aus zwei Perspektiven beleuchten:
+Dabei stelle ich fest, dass viele Programmier-Hürden eigentlich Kommunikationshürden sind.
+Hier möchte ich die Tests aus zwei Perspektiven beleuchten:
 
-1. Als Kommunikationsinstrument
-2. Als Anlernmöglichkeit zum Beitragen
+1. Als Kommunikationsinstrument  
+    Die Tests eignen sich zum Lesen.
+    Dadurch eignen sie sich auch, um darüber zu Sprechen.
+    Wir können verschiedene, bestenfalls offene Kommunikationskanäle verwenden und über die Tests reden.
+    Diese gibt es vielleicht schon, sind der Online-Kurs, Mailinglisten, Treffen und mehr.
+    Zusätzlich kommt noch hinzu, dass die Plattform GitHub Issues bereit stellt, in denen über
+    die Tests, die Imlplementierung und das Formulieren der Tests gesprochen werden kann. 
+2. Als Anlernmöglichkeit zum Beitragen  
+    Wenn Nutzer ihre eigenen User-Stories schreiben können, können sie
+    - andere anlernen
+    - sich gegenseitig helfen
+    - den Entwicklern Arbeit abnehmen
+    - mit den Entwicklern auf verschiedenen Ebenen reden
+    Die Frage ist, was wird benötigt, um einen solchen Austauschprozess zwischen Nutzern und Entwicklern zu erzeugen.
 
+Gestaltung des Betragsprozesses
+-------------------------------
 
+Damit ich den Beitragsprozess optimal gestalten kann, würde ich gerne mit mindestens drei Lehrern darüber reden,
+wie sie den Prozess gerne durchlaufen würden.
+Fragen sind folgende:
+
+- Wie viel von der Interaktion soll auf Github stattfinden?
+- Welche Kommunikationskanäle benutzen sie bereits, um sich mit anderen über Features auszutauschen.
+- Welche Hilfen brauchen sie beim Formulieren der Tests?
+- Wie sollte das Feedback über die neuen Tests aussehen? (Syntax und Ausführung)
+
+Solche und ähnliche Fragen möchte ich mit den Lehrern besprechen.
+Ziel ist es, den Einstieg für die zu erleichtern, die auf diese Weise zur Schul-Cloud beitragen wollen.
+Vielleicht ermöglicht das auch, einen Einstieg in die Programmierung - sein eigenes Feature umzusetzen macht
+am meisten Spaß.
+
+Aussicht
+--------
+
+Ich brauche drei Lehrer, die es interessiert, mit mir über den Beitragsprozess zu reden.
 
 [gherkin]: https://github.com/cucumber/cucumber/wiki/Gherkin
 [fowler-1]: https://martinfowler.com/bliki/BusinessReadableDSL.html
