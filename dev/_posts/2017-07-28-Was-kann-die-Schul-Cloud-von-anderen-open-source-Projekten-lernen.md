@@ -217,10 +217,112 @@ Dokumentation
 -------------
 [dokumentation]: #dokumentation
 
-- Maintainer und Machtstatsu
-- PR
-- Build
-- first contribution
+Open-source bedeutet oft, dass die Software dezentral undüber viele Zeitzonen
+hinweg entwickelt wird.
+Im Falle der Schul-Cloud kann man sich auch vorstellen, dass die Mitarbeiter
+zu Arbeitszeiten und die externen Freizeitentwickler eher zu den Abendstunden
+oder an Feiertagen eitragen.
+Aus der Diskussion ergaben sich folgende Sachverhalte, die deswegen in 
+dokumentierter Form abgelet werden:
+- Erster Beitrag:  
+  Was braucht ein erster Beitrag, was muss man tun, damit man ander Software entwickeln kann?
+  Django hat dazu ein Tutorial geschrieben, dass eine alte Version
+  benutzt, in der dann ein Fehler behoben wird. Schritt für Schritt wird erklärt.
+  Am Ende hat man alles bis zur Annahme des behobenen Fehlers durchlaufen.  
+  Viele Projekte, so auch die Schul-Cloud stellen Fehlerbeschreibungen (Issues)
+  bereit, die sich durch hohe Ausführlichkeit kennzeichnen.
+  Sie geben die Chance, an die Hand genommen zu werden und durch einen eins-zu-eins-Kontakt
+  mit einem Entwickler in die Entwicklung und die Lösung des Fehlers eingeführt zu werden.
+  Oftmals werden diese kombiniert mit einer Beschreibung, wie man das Projekt
+  für die Entwicklung aufsetzt, da diese Schritte für jeden dieser Problemberichte
+  relevant ist.
+- Build  
+  Was braucht es, damit ein Build erfolgreich ist?
+  Neben dem Aufsetzen und modifizieren nutzen Projekte Tests, die automatisch laufen
+  und sicherstellen, dass bestehende Features noch funktionieren.
+  Welche Tests auszuführen sind sollte auch dokumentiert sein.
+  Dass die Tests laufen und eventuelle neue Tests geschrieben werden, ist oftmals
+  eine Vorraussetzung dafür, dass die neuen Beiträge in die Software eingepflegt werden.
+- Pull-Request  
+  Eine Pull-Request, zu Deutsch "Ziehanfrage", ist eine Anfrage, die
+  Quelltextveränderung in den Programmcode neuer Softwareversionen einzubauen.
+  Nicht alle Pull-Requests werden angenommen. Wenn eine Pull-Request abgeleht wird,
+  so werden oftmals Stunden an Arbeitabgelehnt und der Beitragende kann das
+  auf sich projizieren. Hilflosigkeit, Wut und Trauer können gefühlt werden.
+  Diese Enttäuschungen können durch die Art der Kommunikation bei der Pull-Request
+  und die Kommunikation als Dokumentation vor dem ersten menschlichen Kontakt
+  beeinflusst werden.  
+  Github stellt z.B. Pull-Request-Schablonen bereit, die den ersten Text einfüllen.
+  Damit werden die Nutzer geleitet und fragen beantwortet:
+  Was für eine Art Fehler ist das? Wo tritt er auf? Welche Umgebung hat das Programm, wenn es den Fehler erzeugt?
+  Kann und wie kann der Fehler wieder erzeugt werden?
+  TODO: Beispiel LokLak
+  Auf GitHub, bevor man eine Pull-Request erstellt, wird man aufgefordert, die
+  Contributing.md-Datei zu lesen, sollte diese im Repository bestehen.
+  Dort sind allgemeine Erwartungen an Beiträge zum Projekt festgehalten.
+  Wie sehen Commits aus? Welchen Stil verwendet man? TODO: find source
+- Maintainer und Machtstatus  
+  Es gibt Positionen in open-source Projekten, die unterschiedliche
+  Machtpositionen einnehmen. Hier sind ein paar Beispiele:
+  - Gründer der Projekte wie Guido von Rossum für Python oder Linus Torvalds
+    genießen oft hohes Ansehen und haben Entscheidungsgewalt, wohin es
+    mit der Software geht. In Manchen Projekten spricht man von
+    benevolenter Diktatur, also einer Zentralen Person, die wohlwollend ist.
+  - Maintainer sorgen für den Erhalt der Software. Ihnen liegt oft die langfristige
+    Beherrschbarkeit der Software am Herzen. Im Gegensatz zu manchen Beitragenden
+    sind sie nicht zufrieden, wenn ein Beitrag einen Fehler löst und dabei andere
+    Qualitäten der Software wie Verständlichkeit oder Kompatibilität beieinträchtigt.
+    Oftmals werden zum Schutze der Maintainer Regeln erlassen, beispielsweise,
+    dass nur kleine Beiträge angenommen werden oder dass diese vorher diskutierbar sein müssen.
+    TODO: Ref Maintainer Burnout
+  - Beitragende tragen oft nur einmal zur Software bei. Manche bleiben länger debei
+    und erhalten mehr Wissen. Dadurch werden sie fähig, anderen Beitragenden zu helfen.
+    
+    TODO:  Studie: wie oft wird beigetragen?
+  - Nutzer benutzen die Software. Es ist oftmals nicht klar, wie viele Nutzer
+    die Software einsetzen. [s1] spricht davon, dass die Erfinder
+    bestimmter Software Nutzer waren und aufhören, Nutzer der Software zu sein,
+    die sie einsetzen. Um trotzdem mit den Nutzern verbunden zu sein, sollten
+    sie die Software selbst einsetzen.
+    Im Falle von [k1] wird die Software Fastlane verwendet selbst verwendet,
+    um Fastlane zu verwalten.
+  - Trolle benutzen oft negative Sprache, um Macht auf Entscheidungen oder
+    Projekte auszuüben. Sie erhalten Macht durch die Anonymität und 
+    scheinbare Konsequenzenlosigkeit ihrer Taten.[s1]
+  
+  Im Kontext von Open-Gourvernment stellt sich die Frage, wodurch diese Macht
+  legitimiert ist.
+  
+Nicht zu vergessen ist, dass jede Bedingung, die an Beiträge gestellt wird,
+ein Filter ist, der dafür sorgt, dass Beiträge nicht angenommen werden können.
+Im Kontext von open-source stellt sich hier die Frage:
+Wann ist open-source wirklich offen?
+
+Kommunikationsebenen
+--------------------
+
+> Es ist kauptt, dass moderner "Diskurs" für
+> Leute mit den wenigsten Gefühlen und der meisten Freizeit optimiert ist. 
+
+[Vortrag Minute 33:44][s1]
+
+Ebenen der Kommunikation:
+
+- Asynchron: Main, Issues, Twitter
+- Echtzeittext bei Mehrdeutigkeit und Unverständnis
+- Sprachdialog, um sich einzufühlen
+- Videokondferenz, um zu sehen, was der andere fühlt
+- Persönliches Treffen, wenn das alles nicht geht, erzeugt gute Kompromisse
+
+In diese Ebenen zu eskalieren, kann Trolle abschrecken. Wenn man ein Hangout vorschlägt,
+dann erodiert die Anonymität eines Trolls.
+Als Schlussfolgerung zieht [s1], dass eine Eskalation in andere Kommunikationsformen
+einfach sein sollte. Weitere Beispiele für Kommuniktion sind Live-Coding oder eine Zeit mit einem 
+anderen Entwickler zu buchen.
+
+Wann ist open-source wirklich offen?
+------------------------------------
+
 
 [z1]: https://www.meetup.com/Zalando-Tech-Events-Berlin/events/241815023/
 [cm1]: https://twitter.com/claus__m
@@ -232,3 +334,4 @@ Dokumentation
 [h1]: http://hintjens.com/blog:108
 [o1]: http://opensourcesurvey.org/2017/
 [osr]: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
+
