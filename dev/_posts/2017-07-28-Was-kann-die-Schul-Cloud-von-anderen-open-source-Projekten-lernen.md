@@ -205,8 +205,6 @@ Was braucht es, um eine solche diverse Gemeinschaft zu erstellen?
   ist narzistisch. Es gibt so viele Projekte, auf die viele aufbauen
   und open-source hat eine riesige Lücke an Beiträgen zu wichtiger Infrastruktursoftware.
   [Quelle][osr]
-
-TODO:
   
 Der Kommunikationskanal
 -----------------------
@@ -300,6 +298,7 @@ Wann ist open-source wirklich offen?
 
 Kommunikationsebenen
 --------------------
+[kommunikationsebenen]: #kommunikationsebenen
 
 > Es ist kauptt, dass moderner "Diskurs" für
 > Leute mit den wenigsten Gefühlen und der meisten Freizeit optimiert ist. 
@@ -323,6 +322,45 @@ anderen Entwickler zu buchen.
 Wann ist open-source wirklich offen?
 ------------------------------------
 
+Ob ein open-source Projekt wirklich offen ist, ist eine Frage des Maßstabes.
+Es ist eine Frage wie "Ist das Bildungssystem durchlässig?" oder 
+"Sind die Nutzer zufrieden?"
+Es gibt viele Bedingungen, die an Beiträge geknüpft sind, die die Software
+verändern und daraufhin wieder die Zielgruppe beeinflussen, die die Beiträge liefert.
+
+Schaut man sich Verhaltenskodexe an, so findet man häufig die Ablehnug bestimmter
+Art von Diskriminierung. Hier ein Beispiel:
+
+> Wir verpflichten uns, Teilnahme an diesem Projekt für jeden angenehm zu gestalten, 
+> unabhängig vom Grad der Erfahrung, Geschlecht, Geschlechtszugehörigkeit, 
+> -ausdruck, -orientierung, Behinderung, persönlichem Auftreten, Körpergröße,
+> Rasse, ethnischer Zugehörigkeit, Alter, Religion oder Nationalität.
+
+[Übersetzt aus Moya Code of Conduct][m1]
+
+Peter Hintjens weißt in seinem Blog darauf hin, dass ein Code of Conduct auch
+gegen seine Intension genutzt werden kann, zu schützen.[h1]
+
+Ein Problem sehe ich bei der Ablehnung bestimmter Diskriminierung in dem 
+Fokus auf die Ablehnung. Diese stellt noch keine Alternative zur Verfügung, die
+erwünscht ist. Eine Diskussion darüber, ob es eine Verletzung gab,
+kann also ohne ebenbürtige Gegenrede der Vorwurf der Diskriminierung begünstigt werden.
+Die in Abschnitt [Kommunikationsebenen][kommunikationsebenen] beschriebenen
+Kommunikationsmuster werden nicht besprochen.
+Die im Recht und der Mediation übliche Einbeziehung Dritter ist im Moya-
+Verhaltenskodex via E-Mail angesprochen.
+
+In seinem Blogartikel "How to capture an open-source Project"[h2], beschreibt
+Hintjens, dass er aus Ethik und Selbstinteresse nur an open-source Projekten
+arbeitet, die ihm garantieren, dass die Software nicht gegen ihn eingesetzt
+werden kann, wie man ein open-source Projekt durch die Hauptentwickler übernimmt.
+
+Schlussfolgerungen für die Schul-Cloud
+======================================
+
+
+
+
 
 [z1]: https://www.meetup.com/Zalando-Tech-Events-Berlin/events/241815023/
 [cm1]: https://twitter.com/claus__m
@@ -332,6 +370,7 @@ Wann ist open-source wirklich offen?
 [s1]: http://blog.testdouble.com/posts/2014-12-02-the-social-coding-contract.html
 [w1]: https://en.wikipedia.org/wiki/Code_of_conduct
 [h1]: http://hintjens.com/blog:108
+[h2]: http://hintjens.com/blog:68
 [o1]: http://opensourcesurvey.org/2017/
 [osr]: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
-
+[m1]: https://github.com/Moya/contributors/blob/master/Code%20of%20Conduct.md
