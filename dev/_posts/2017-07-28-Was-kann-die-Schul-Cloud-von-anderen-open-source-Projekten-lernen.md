@@ -355,6 +355,13 @@ Hintjens, dass er aus Ethik und Selbstinteresse nur an open-source Projekten
 arbeitet, die ihm garantieren, dass die Software nicht gegen ihn eingesetzt
 werden kann, wie man ein open-source Projekt durch die Hauptentwickler übernimmt.
 
+In ihrem Blogpost [The Null Process][n1] argumentiert Kate Heddleston, 
+dass ein Null-Prozess einer der schlimmsten implementierten Prozesse ist,
+den man haben kann, da dieser jede Reflektion und Verbesserung verhindert.
+Nur einen Verhaltenskodex aufzustellen ist also nicht genug.
+Es muss geschaut werden, dass es einen reflektierenden Prozess gibt, der
+die Situation verbessert. Dazu ist es notwendig, diese auch zu erkennen.
+
 Schlussfolgerungen für die Schul-Cloud
 ======================================
 
@@ -374,3 +381,4 @@ Schlussfolgerungen für die Schul-Cloud
 [o1]: http://opensourcesurvey.org/2017/
 [osr]: https://www.fordfoundation.org/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/
 [m1]: https://github.com/Moya/contributors/blob/master/Code%20of%20Conduct.md
+[n1]: https://kateheddleston.com/blog/the-null-process
