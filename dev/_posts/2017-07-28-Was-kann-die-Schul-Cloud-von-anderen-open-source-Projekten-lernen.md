@@ -72,7 +72,7 @@ Die Podiumsdiskussion hat folgende Aspekte betont:
    Anfängern werden Beitragende, aus Beitragenden werden Maintainer.
    Im Abschnitt [Dokumentation][dokumentation] wird behandelt, wie die Rollen
    festgeschrieben werden.
-4. Menschlicher Anteil  
+4. **Menschlicher Anteil**:  
    GitHub hat viele gute Entwickler dadurch rekrutiert, dass GitHub-Mitarbeiter
    wo sie waren auf Kosten der Firma Treffen organisieren und Getränke ausgeben
    konnten. Durch den persönlichen Kontakt konnte eine längere Verbindung
@@ -158,7 +158,7 @@ Wie oft einzelne Leute beitragen, ist sehr verschieden.
 Die meisten tragen nur einmal bei.
 Eine offene Frage ist, wie kann man messen, ob die Hürden, beizutragen
 zu streng sind.
-Um die Quelität der Offenheit sicherzustellen, müssen solche Hürden untersucht
+Um die Qualität der Offenheit sicherzustellen, müssen solche Hürden untersucht
 werden.
 
 Verhaltenskodex
@@ -362,8 +362,7 @@ Nur einen Verhaltenskodex aufzustellen ist also nicht genug.
 Es muss geschaut werden, dass es einen reflektierenden Prozess gibt, der
 die Situation verbessert. Dazu ist es notwendig, diese auch zu erkennen.
 
-Schlussfolgerungen für die Schul-Cloud
-======================================
+
 
 
 
