@@ -135,6 +135,12 @@ OUTLINE:
 - parallelize
 - error handling (disconnect, auth)
 
+- ref: docker container
+  - how to schedule
+  - how to pass credentials (ENV)
+  - how to automate build
+  - how to add to schul-cloud
+
 
 [resource]: https://github.com/schul-cloud/resources-api-v1/tree/master/schemas/resource#readme
 [content]: https://content.schul-cloud.org
