@@ -126,7 +126,14 @@ http.get("https://content.schul-cloud.org/v1/resources/" + RESOURCE_ID)
 ```
 
 
+OUTLINE:
 
+- fetch resources
+- transform resource
+- how to update
+- how to delete unused
+- parallelize
+- error handling (disconnect, auth)
 
 
 [resource]: https://github.com/schul-cloud/resources-api-v1/tree/master/schemas/resource#readme
