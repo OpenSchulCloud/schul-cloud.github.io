@@ -46,7 +46,7 @@ Es gibt Probleme, deren Lösung recht einfach ist.
 Diese bekommen die Markierung `nur-für-einsteiger`.
 So kannst du anfangen:
 
-1. Finde ein [Einsteigerproblem][einsteigerissues], das du gerne lösen möchtest.
+1. Finde ein Einsteigerproblem für [Github-Neulinge][einsteigerissues] und [Schul-Cloud-Einsteiger][Schul-Cloud-Einsteiger], das du gerne lösen möchtest.
 2. Schreibe einen Kommentar darunter, dass du gerne daran arbeiten möchtest.
 3. Du kannst anfangen Code zu schreiben und deine Fragen zu stellen.
 
@@ -71,7 +71,8 @@ Hier wird gesammelt, was du als Entwickeler von Schul-Cloud dafür tun kannst:
 
 ### Issues erstellen
 
-Das Label `first-timers-only` für [Einsteigerissues][einsteigerissues].
+Das Label `first-timers-only` für [Einsteigerissues][einsteigerissues], die für GitHub-Neulinge sind.
+Das Label `Einsteiger` für [Schul-Cloud-Einsteiger][Schul-Cloud-Einsteiger], die neu bei der Schul-Cloud sind.
 Das sind geeignete Issues für Einsteiger:
 
 - Alles, was nicht so wichtig ist, dich aber nur eine Minute kostet, es zu beheben
@@ -89,3 +90,4 @@ In der Issue sollte stehen:
 [blog]: dev
 [wiki-1]: https://github.com/schul-cloud/schulcloud-server/wiki/
 [new-issue]: https://github.com/schul-cloud/schul-cloud.github.io/issues/new
+[Schul-Cloud-Einsteiger]: https://github.com/search?utf8=%E2%9C%93&q=org%3Aschul-cloud+state%3Aopen+label%3A%22Einsteiger%22&type=Issues&ref=searchresults
