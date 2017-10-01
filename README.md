@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/schul-cloud/schul-cloud.github.io.svg?branch=master)](https://travis-ci.org/schul-cloud/schul-cloud.github.io)
 [![](http://firsttimers.quelltext.eu/repository/schul-cloud/schul-cloud.github.io.svg)](http://firsttimers.quelltext.eu/repository/schul-cloud/schul-cloud.github.io.html)
-
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 Das Entwicklerportal der Schul-Cloud ist erreichbar unter [schul-cloud.github.io][site].
 
