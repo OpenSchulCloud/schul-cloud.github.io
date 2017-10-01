@@ -35,6 +35,7 @@ Wo bekomme ich Hilfe zu Schul-Cloud?
 ------------------------------------
 [hilfe]: #wo-bekomme-ich-hilfe-zu-schul-cloud
 
+Wir haben einen offen [Chat auf Gitter][gitter], in dem Du gerne alle Fragen los werden kannst und mit uns in Kontakt treten.
 Du kannst eine [Issue öffnen][new-issue] und fragen.
 Es gibt ein [Blog][blog] und [Wikiseiten][wiki-1] mit Tipps.
 
@@ -91,3 +92,4 @@ In der Issue sollte stehen:
 [wiki-1]: https://github.com/schul-cloud/schulcloud-server/wiki/
 [new-issue]: https://github.com/schul-cloud/schul-cloud.github.io/issues/new
 [Schul-Cloud-Einsteiger]: https://github.com/search?utf8=%E2%9C%93&q=org%3Aschul-cloud+state%3Aopen+label%3A%22Einsteiger%22&type=Issues&ref=searchresults
+[gitter]: https://gitter.im/schul-cloud-org/Lobby
