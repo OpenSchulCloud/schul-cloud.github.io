@@ -27,3 +27,5 @@ Der Style ist kopiert von http://blog.schul-cloud.org
 [site]: https://schul-cloud.github.io
 [new-issue]: https://github.com/schul-cloud/schul-cloud.github.io/issues/new
 [new-pr]: https://github.com/schul-cloud/schul-cloud.github.io/compare
+
+**Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
